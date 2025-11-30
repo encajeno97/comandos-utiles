@@ -1,0 +1,148 @@
+@import url("./devjobs.css");
+@import url("./variables.css");
+
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+  background-color: var(--bg-form);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color-light-gray);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-options a {
+  font-size: 0.9rem;
+  color: var(--text-color-blue);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* font-size: 0.9rem; */
+  color: var(--text-color-light-gray);
+}
+
+.remember-me input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  /* margin: 0; */
+  border-radius: 4px;
+  position: relative;
+  background-color: var(--background-gray);
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff; /* Fondo de color cuando está seleccionado */
+  border-color: #007bff;
+}
+
+/* Crea el checkmark (marca) */
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  /* transform: rotate(45deg); */
+}
+
+/* Opcional: Estilo al pasar el ratón */
+input[type="checkbox"]:hover {
+  border-color: #007bff;
+}
+
+#link-account {
+  color: var(--text-color-light-gray);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#link-account::before,
+#link-account::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#link-account::before {
+  margin-right: 1rem;
+}
+
+#link-account::after {
+  margin-left: 1rem;
+}
+
+.btn-submit {
+  background-color: var(--text-color-blue);
+  color: var(--text-color);
+  font-weight: 600;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-up-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.sign-up-links a {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: var(--background);
+}
