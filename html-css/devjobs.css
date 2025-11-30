@@ -5,6 +5,7 @@
   --text-color-blue: #1073d4;
   --background-light-blue: #0f2b45;
   --background-gray: #334155;
+  --bg-feature-job: #1f293b;
 }
 
 * {
@@ -19,6 +20,10 @@ body {
   color: var(--text-color);
   background: var(--background);
 }
+
+/* p {
+  text-wrap: pretty;
+} */
 
 span {
   font-size: 1.5rem;
@@ -80,6 +85,37 @@ a {
   background-color: var(--background-gray);
 }
 
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-icon {
+  display: none;
+  color: var(--text-color);
+}
+
+.icon-container svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.menu-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menu-button svg {
+  width: 30px;
+  height: 30px;
+  color: var(--text-color);
+}
+
 .hero-container {
   width: 100%;
   max-height: 650px;
@@ -115,6 +151,7 @@ a {
   width: 100%;
   font-size: 5rem;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .hero-text p {
@@ -162,4 +199,137 @@ a {
   color: var(--text-color);
   font-weight: 600;
   cursor: pointer;
+}
+
+section {
+  padding: 0 2rem;
+  margin: 4rem 0;
+}
+
+.about-devjobs {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-devjobs h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.about-devjobs p {
+  color: var(--text-color-light-gray);
+  text-align: center;
+  text-wrap: balance;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.features-devjobs {
+  display: flex;
+  flex-wrap: wrap;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  gap: 1rem;
+  width: 100%;
+  /* max-width: 1500px; */
+  /* margin: 0 auto; */
+  justify-content: center;
+}
+
+article {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  background: var(--bg-feature-job);
+  border-radius: 8px;
+}
+
+article .feature-icon-container {
+  display: inline-block;
+  border-radius: 100%;
+  padding: 0.7rem;
+  background: var(--background-light-blue);
+}
+
+article svg {
+  width: 30px;
+  height: 30px;
+  color: var(--text-color-blue);
+}
+
+article h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+article p {
+  color: var(--text-color-light-gray);
+  text-align: center;
+  text-wrap: pretty;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-color-light-gray);
+  border-top: 1px solid var(--background-gray);
+}
+
+@media screen and (width <= 900px) {
+  .nav,
+  .link-container {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .search-box {
+    max-width: 600px;
+  }
+}
+@media screen and (width <= 640px) {
+  .search-icon {
+    display: block;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: .9rem;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .about-devjobs p {
+    font-size: .9rem;
+  }
 }
