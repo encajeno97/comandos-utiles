@@ -1,12 +1,4 @@
-:root {
-  --background: #101922;
-  --text-color: #ffffff;
-  --text-color-light-gray: #a9b3bf;
-  --text-color-blue: #1073d4;
-  --background-light-blue: #0f2b45;
-  --background-gray: #334155;
-  --bg-feature-job: #1f293b;
-}
+@import url("./variables.css");
 
 * {
   box-sizing: border-box;
@@ -19,6 +11,9 @@
 body {
   color: var(--text-color);
   background: var(--background);
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* p {
@@ -86,9 +81,10 @@ a {
 }
 
 .icon-container {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 15px; */
+  display: none;
 }
 
 .search-icon {
@@ -291,6 +287,16 @@ footer {
 }
 
 @media screen and (width <= 900px) {
+  .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search-icon {
+    display: block;
+  }
+
   .nav,
   .link-container {
     display: none;
@@ -313,16 +319,12 @@ footer {
   }
 }
 @media screen and (width <= 640px) {
-  .search-icon {
-    display: block;
-  }
-
   .hero-text h1 {
     font-size: 2.5rem;
   }
 
   .hero-text p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .search-box {
@@ -330,6 +332,6 @@ footer {
   }
 
   .about-devjobs p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
