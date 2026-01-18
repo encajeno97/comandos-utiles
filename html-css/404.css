@@ -1,0 +1,79 @@
+@import url("./devjobs.css");
+@import url("./variables.css");
+
+svg {
+  width: 100px;
+  height: 100px;
+  color: var(--text-color-blue);
+}
+
+main {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color-light-gray);
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color-light-gray);
+  margin: 0;
+  max-width: 400px;
+  text-align: center;
+}
+
+.link {
+  font-size: 1rem;
+  color: var(--text-color-white);
+  text-decoration: none;
+  font-weight: 500;
+  background-color: var(--text-color-blue);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
